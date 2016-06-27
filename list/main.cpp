@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cassert>
+#include <cstdlib>
 
 #include "list.h"
 
@@ -21,16 +22,15 @@ int main() {
 	std::list<std::string> b;
 
 	for (int i = 0; i < 30; i++) {
-		char b[31], c[31];
-		_itoa(i, c, 10);
+        std::string c = rand_stirng();
 		a.push_back(c);
 		a1.push_back(c);
 	}
 
-	/*for (auto& i : a) {
+	for (auto& i : a) {
 		std::cout << i << ' ';
 	}
-	std::cout << std::endl;*/
+	std::cout << std::endl;
 
 	auto i = a.begin();
 	auto j = a.begin();
@@ -103,10 +103,11 @@ int main() {
 						assert(*A == *B);
 					else {
 
-						if (rand() % 10 == 0) {
-							std::cout << "ASSSSSSSSSSSSSSSSSS\n";
-							a.erase(j);
-						}
+						/* if (rand() % 10 == 0) { */
+						/* 	std::cout << "ASSSSSSSSSSSSSSSSSS\n"; */
+						/* 	a.erase(j); */
+						/* } */
+
 					}
 				}
 				break;
